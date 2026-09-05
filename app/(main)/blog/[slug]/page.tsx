@@ -14,6 +14,7 @@ import { formatTimeAgo } from "@/utils/formatTimeAgo"
 import { getAllBlogSlugs, getBlogPostBySlug, getBlogPosts, getBlogCategories } from "@/lib/api/blogs"
 import BlogPostFaqs from "@/components/blog/BlogPostFaqs"
 import BlogPostCta from "@/components/blog/BlogPostCta"
+import BlogHeroImage from "@/components/blog/BlogHeroImage"
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -61,7 +62,7 @@ export default async function BlogDetailPage({ params }: Props) {
                 <div className="mt-6"><CategoryTag label={post.category} /></div>
                 <h1 className="heading-h1 text-[40px] mt-4 max-w-3xlx text-text-dark">{post.title}</h1>
 
-                <div className="mt-4 flex flex-wrap items-center gap-3 para-small text-text-secondary-muter">
+                <div className="mt-4 mb-8 flex flex-wrap items-center gap-3 para-small text-text-secondary-muter">
                     {post.author && (
                         <span className="flex items-center gap-2">
                             <Image
@@ -79,9 +80,19 @@ export default async function BlogDetailPage({ params }: Props) {
                     {post.readTimeMinutes && (<><span>•</span><span>{post.readTimeMinutes} min read</span></>)}
                 </div>
 
-                <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-brand-16 sm:aspect-[21/9] sheen-sweep-hover overflow-hidden">
+                {/* hero image */}
+                {/* <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-brand-16 sm:aspect-[21/9] sheen-sweep-hover overflow-hidden">
                     <Image src={post.coverImage} alt={post.coverImageAlt} fill priority sizes="100vw" className="object-cover" />
-                </div>
+                </div> */}
+
+                <BlogHeroImage
+                    src={post.coverImage}
+                    alt={post.coverImageAlt}
+                    title={post.titleHighlighted ?? post.title}
+                    excerpt={post.excerptHighlighted ?? post.excerpt}
+                    variant="hero"
+                    priority
+                />
             </SectionContainer>
 
             <SectionContainer containerClass="container-y-padding pt-0">

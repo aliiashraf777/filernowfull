@@ -37,7 +37,7 @@ export type ContactFormValues = z.infer<typeof contactFormSchema>;
 // Become-Filer form — field names match fastApi's /api/admin/leads payload
 // (username, service_type, city) as a deliberate, isolated adaptation.
 // Everything here is provisional pending confirmation that this endpoint
-// is actually public (see route.ts TODOs).
+// is actually public.
 // -----------------------------------------------------------------------
 export const FILER_SERVICE_GROUPS = groupServicesByCategory().map((group) => ({
   label: group.label,
@@ -52,7 +52,7 @@ const filerServiceValues = FILER_SERVICE_GROUPS.flatMap((g) =>
 // fast api sample payload shows a human-readable label ("Filer Registration"),
 // not the stable svc1–svc16 id. This map bridges that gap so the frontend
 // can still validate against the stable id while sending what his endpoint
-// currently expects. Flag to Umar: this is fragile — a label rename in
+// currently expects. Flag to BackendDev this is fragile — a label rename in
 // appData.tsx silently stops matching whatever his DB has stored.
 
 const serviceLabelById = new Map(

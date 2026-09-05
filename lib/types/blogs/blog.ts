@@ -4,6 +4,8 @@
 // mirror suggested below). Every surface that touches a blog post
 // imports THIS type — nothing redeclares its own shape.
 
+import React from "react"
+
 export interface IBlogAuthor {
     name: string,
     role: string,
@@ -24,10 +26,12 @@ export interface IBlogFaqItem {
 
 export interface IBlogPost {
     id: string,
-    slug: string,               // drives /blog/[slug]
+    slug: string,     // drives /blog/[slug]
     title: string,
     excerpt: string,
-    category: string,           // display label, e.g. "Tax Tips" — see IBlogCategory for filter/counts
+    titleHighlighted?: React.ReactNode   // 80–90 char JSX version of title
+    excerptHighlighted?: React.ReactNode // 80–90 char JSX version of excerpt
+    category: string, // display label, e.g. "Tax Tips" — see IBlogCategory for filter
     coverImage: string,
     coverImageAlt: string,
     publishedAt: string,        // ISO 8601 — "time ago" is derived client-side via formatTimeAgo,

@@ -1,23 +1,23 @@
 // lib/api/leads-submit.ts
 import type { BecomeFilerFormValues, ContactFormValues } from "@/lib/validations/leads-schema";
 
-interface LeadSubmitResponse {
+interface ILeadSubmitResponse {
   ticketId: string;
   message: string;
 }
 
-interface FastApiValidationError {
+interface IFastApiValidationError {
   loc: (string | number)[];
   msg: string;
   type: string;
 }
 
-interface LeadSubmitError {
-  message: string | FastApiValidationError[];
+interface ILeadSubmitError {
+  message: string | IFastApiValidationError[];
   errors?: Record<string, string[]>;
 }
 
-function extractErrorMessage(data: LeadSubmitError): string {
+function extractErrorMessage(data: ILeadSubmitError): string {
   if (typeof data.message === "string") return data.message;
   if (Array.isArray(data.message)) {
     // FastAPI's 422 shape: turn "field required" objects into readable text
@@ -29,20 +29,20 @@ function extractErrorMessage(data: LeadSubmitError): string {
   return "Submission failed";
 }
 
-async function postLead<T>(endpoint: string, payload: T): Promise<LeadSubmitResponse> {
+async function postLead<T>(endpoint: string, payload: T): Promise<ILeadSubmitResponse> {
   const res = await fetch(endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
 
-  const data = (await res.json()) as LeadSubmitResponse | LeadSubmitError;
+  const data = (await res.json()) as ILeadSubmitResponse | ILeadSubmitError;
 
   if (!res.ok) {
-    throw new Error(extractErrorMessage(data as LeadSubmitError));
+    throw new Error(extractErrorMessage(data as ILeadSubmitError));
   }
 
-  return data as LeadSubmitResponse;
+  return data as ILeadSubmitResponse;
 }
 
 // Always our own Next.js routes, never the backend's /api/admin/leads path directly.

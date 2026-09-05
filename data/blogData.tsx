@@ -33,7 +33,7 @@ export const blogPosts: IBlogPost[] = [
         author: filerAuthor,
         content: `## What Are Tax Deductions?
 
-Tax deductions are legal provisions under the [Income Tax Ordinance, 2001](/), of Pakistan that allow taxpayers to reduce their total gross income. By reducing your [taxable income](/), the final tax liability you owe to the [Federal Board of Revenue (FBR)](/) is lowered significantly. It is crucial to distinguish between direct deductions from **taxable income** [versus tax credits](/), which directly offset your final tax bill.
+Tax deductions are legal provisions under the **Income Tax Ordinance, 2001**, of Pakistan that allow taxpayers to reduce their total gross income. By reducing your **taxable income**, the final tax liability you owe to the [Federal Board of Revenue (FBR)](/services/service-fbr-notices) is lowered significantly. It is crucial to distinguish between direct deductions from **taxable income** versus tax credits, which directly offset your final tax bill.
 
 
 ## Types of Tax Deductions Available in Pakistan
@@ -42,12 +42,12 @@ Under current Pakistani tax laws, [salaried individuals](/), [business owners](/
 
 - **Charitable Donations:** Donations made to non-profit organizations, boards, and educational institutions approved under the Second Schedule of the Income Tax Ordinance can yield significant tax rebates.
 - **Investment in Shares and Insurance:** Tax credits are available for investments in new shares, mutual funds, and life insurance premiums, subject to statutory limits based on your taxable income.
-- **Pension Fund Contributions:** Contributions made to approved Voluntary Pension Schemes (VPS) are eligible for tax deductions of up to 20% of the taxpayer's taxable income for the year.
+- **Pension Fund Contributions:** Contributions made to approved Voluntary Pension Schemes (VPS) are eligible for tax deductions of up to 20% of the taxpayer's [taxable income for the year](/tax-rates).
 - **House Loan Interest Payments:** Deductions can be claimed on markup or profit paid on home loans for construction or purchase of a primary residence from scheduled banks.
 
 ## How to Claim Tax Deductions
 
-To legally claim these deductions, they must be properly declared in your annual **Income Tax Return** submitted through the **IRIS portal** of the **FBR**. For salaried individuals, you must submit proof of investment, home loan markup certificates, or donation receipts to your employer's HR or finance department before the end of the **fiscal year (June 30th)** so they can adjust the tax withholding accordingly.
+To legally claim these deductions, they must be properly declared in your annual [Income Tax Return](/services/service-tax-return-filing) submitted through the **IRIS portal** of the **FBR**. For salaried individuals, you must submit proof of investment, home loan markup certificates, or donation receipts to your employer's HR or finance department before the end of the **fiscal year (June 30th)** so they can adjust the tax withholding accordingly.
 
 ## Common Mistakes to Avoid
 
@@ -131,9 +131,9 @@ Many salaried employees assume their employer automatically applies every eligib
             },
         ],
     },
-    // 9
+    // 2
     {
-        id: "blog9",
+        id: "blog2",
         slug: "understanding-input-tax-credit-itc-pakistan",
         title: "Understanding Input Tax Credit (ITC) in Pakistan",
         excerpt: "How sales-tax-registered businesses can legally offset tax paid on purchases against what they owe FBR.",
@@ -199,9 +199,9 @@ ITC isn't a loophole — it's a standard mechanism built into the sales tax syst
             },
         ],
     },
-    // 10
+    // 3
     {
-        id: "blog10",
+        id: "blog3",
         slug: "gst-exemptions-in-pakistan-explained",
         title: "GST Exemptions in Pakistan: What Business Owners Should Know",
         excerpt: "Which goods and services skip General Sales Tax, why the exemption exists, and how it differs from zero-rating.",
@@ -267,9 +267,9 @@ Exemptions exist for public welfare reasons, not as a general tax-avoidance rout
             },
         ],
     },
-    // 11
+    // 4
     {
-        id: "blog11",
+        id: "blog4",
         slug: "gross-profit-tax-what-business-owners-must-know",
         title: "Gross Profit Tax: What Business Owners Must Know",
         excerpt: "How FBR uses your gross profit margin as an audit benchmark — and what to do if yours looks too low.",
@@ -329,9 +329,9 @@ Treat your gross profit calculation as more than a bookkeeping formality — it'
             },
         ],
     },
-    // 12
+    // 5
     {
-        id: "blog12",
+        id: "blog5",
         slug: "tax-filing-guide-for-small-business-owners",
         title: "A Complete Guide to Tax Filing for Small Business Owners",
         excerpt: "Why annual tax filing isn't optional for small businesses in Pakistan, and what it unlocks when done right.",
@@ -387,9 +387,9 @@ Whether you're just starting out or have been running your business for years, t
             },
         ],
     },
-    // 13
+    // 6
     {
-        id: "blog13",
+        id: "blog6",
         slug: "how-to-claim-business-tax-credits-and-deductions",
         title: "How to Claim Tax Credits and Deductions for Your Business",
         excerpt: "The everyday business expenses you're allowed to deduct — and the difference between a deduction and a credit.",
@@ -450,9 +450,9 @@ Overpaying tax rarely comes from bad luck — it usually comes from under-docume
             },
         ],
     },
-    // 14
+    // 7
     {
-        id: "blog14",
+        id: "blog7",
         slug: "net-profit-tax-a-complete-guide-for-businesses",
         title: "Net Profit Tax: A Complete Guide for Businesses",
         excerpt: "Net profit tax is charged on what's left after expenses — not your total revenue. Here's how that calculation works.",
@@ -510,9 +510,9 @@ Understanding that tax applies to *net* profit, not gross revenue, changes how y
             },
         ],
     },
-    // 15
+    // 8
     {
-        id: "blog15",
+        id: "blog8",
         slug: "corporate-income-tax-guide-for-companies",
         title: "Corporate Income Tax: A Complete Guide for Companies",
         excerpt: "What registered companies in Pakistan owe FBR each year, and the documents that filing actually requires.",
@@ -576,9 +576,9 @@ Corporate tax compliance compounds over time — a clean filing history makes fu
             },
         ],
     },
-    // 16
+    // 9
     {
-        id: "blog16",
+        id: "blog9",
         slug: "income-tax-law-and-rates-in-pakistan",
         title: "Income Tax Law and Rates in Pakistan: A Comprehensive Guide",
         excerpt: "The current income tax slabs for salaried individuals, businesses, and companies — and what the law actually covers.",
@@ -644,12 +644,9 @@ Tax rates and rules shift year to year, which means the "how" of filing correctl
             },
         ],
     },
-    // 17
-    // Append to blogPosts — batch 2 (rental/property, FBR notices, wealth tax,
-    // stock investors, non-filing consequences, zakat, payroll tax, employment tax)
-
+    // 10
     {
-        id: "blog17",
+        id: "blog10",
         slug: "rental-and-property-tax-rules-in-pakistan",
         title: "Tax Rules on Rental & Property Income in Pakistan",
         excerpt: "How rental income is taxed, when capital gains tax applies on a property sale, and what documents you'll need.",
@@ -712,8 +709,9 @@ Property income is one of the more commonly under-declared income types — part
             },
         ],
     },
+    // 11
     {
-        id: "blog18",
+        id: "blog11",
         slug: "how-to-handle-an-fbr-tax-notice",
         title: "How to Handle an Income Tax Notice from FBR",
         excerpt: "What the common FBR notice sections mean, how much time you have to respond, and what happens if you don't.",
@@ -782,8 +780,9 @@ The single biggest mistake people make with FBR notices is ignoring them, hoping
             },
         ],
     },
+    // 12
     {
-        id: "blog19",
+        id: "blog12",
         slug: "wealth-tax-in-pakistan-who-pays-and-why",
         title: "Wealth Tax in Pakistan: Who Pays It & Why",
         excerpt: "There's no standalone wealth tax in Pakistan — but the annual Wealth Statement (Form 116) is mandatory for most filers.",
@@ -843,8 +842,9 @@ Even taxpayers with modest assets should file a Wealth Statement — a NIL state
             },
         ],
     },
+    // 13
     {
-        id: "blog20",
+        id: "blog13",
         slug: "tax-rules-for-stock-market-investors-in-pakistan",
         title: "Tax Regulations for Stock Market Investors in Pakistan",
         excerpt: "Capital gains tax on shares, how dividend income is taxed, and why filing is still required even after your broker deducts tax.",
@@ -904,8 +904,9 @@ The most common mistake investors make is assuming that because a broker deducts
             },
         ],
     },
+    // 14
     {
-        id: "blog21",
+        id: "blog14",
         slug: "consequences-of-not-paying-income-tax-in-pakistan",
         title: "The Consequences of Not Paying Income Tax",
         excerpt: "Losing ATL status, facing fines, and triggering FBR notices — what actually happens when you skip or delay filing.",
@@ -963,8 +964,9 @@ None of these consequences are permanent — but they are avoidable. Filing on t
             },
         ],
     },
+    // 15
     {
-        id: "blog22",
+        id: "blog15",
         slug: "zakat-and-charity-tax-deductions-in-pakistan",
         title: "The Role of Zakat and Charity in Income Tax Deductions",
         excerpt: "How donations to approved organizations legally reduce your taxable income under Section 61 of the Income Tax Ordinance.",
@@ -1020,8 +1022,9 @@ If charitable giving is already part of your financial habits, routing it throug
             },
         ],
     },
+    // 16
     {
-        id: "blog23",
+        id: "blog16",
         slug: "payroll-tax-in-pakistan-guide-for-employers",
         title: "Payroll Tax in Pakistan: A Simple Guide for Employers",
         excerpt: "What employers are legally required to withhold from employee salaries, and how the filing process actually works.",
@@ -1089,8 +1092,9 @@ Getting payroll tax wrong doesn't just risk a penalty for the business — it cr
             },
         ],
     },
+    // 17
     {
-        id: "blog24",
+        id: "blog17",
         slug: "employment-tax-a-guide-for-employers",
         title: "Employment Tax: A Comprehensive Guide for Employers",
         excerpt: "Beyond salary withholding — the broader compliance obligations businesses take on the moment they hire staff.",
@@ -1156,11 +1160,9 @@ Employment tax compliance is easy to underestimate when a business is small, but
             },
         ],
     },
-    // 25
-    // (types of income tax, legal tax-saving, tax planning, income tax guide,
-    //  VAT/sales-tax registration, federal excise duty, business licenses, agricultural tax)
+    // 18
     {
-        id: "blog25",
+        id: "blog18",
         slug: "types-of-income-tax-in-pakistan",
         title: "Types of Income Tax and Their Details in Pakistan",
         excerpt: "Salary, business, corporate, capital gains, property, and freelance income are all taxed differently — here's how each works.",
@@ -1224,8 +1226,9 @@ Misclassifying your income type is one of the more common filing mistakes — a 
             },
         ],
     },
+    // 19
     {
-        id: "blog26",
+        id: "blog19",
         slug: "legal-ways-to-save-income-tax-in-pakistan",
         title: "Legal Ways to Save on Income Tax in Pakistan",
         excerpt: "Deductions, credits, and habits that legally lower what you owe — without cutting any corners with FBR.",
@@ -1294,8 +1297,9 @@ None of these methods involve bending the rules — they're built into the tax c
             },
         ],
     },
+    // 20
     {
-        id: "blog27",
+        id: "blog20",
         slug: "tax-planning-tips-for-business-owners",
         title: "Tax Planning Tips for Business Owners",
         excerpt: "Choosing the right structure, tracking deductible expenses, and staying ATL-listed — planning ahead beats filing at the deadline.",
@@ -1360,8 +1364,9 @@ The businesses that pay the least legally aren't the ones with clever loopholes 
             },
         ],
     },
+    // 21
     {
-        id: "blog28",
+        id: "blog21",
         slug: "income-tax-in-pakistan-a-comprehensive-guide",
         title: "Income Tax in Pakistan: A Comprehensive Guide",
         excerpt: "Who's required to file, why it matters beyond compliance, and the documents you'll need to have ready.",
@@ -1423,8 +1428,9 @@ Filing income tax is often treated as a once-a-year obligation to get through, b
             },
         ],
     },
+    // 22
     {
-        id: "blog29",
+        id: "blog22",
         slug: "vat-sales-tax-registration-guide-pakistan",
         title: "VAT (Sales Tax) Registration: A Comprehensive Guide",
         excerpt: "What's called VAT elsewhere is Sales Tax in Pakistan — here's the turnover threshold, required documents, and timeline.",
@@ -1488,8 +1494,9 @@ The registration itself is fairly quick, but it commits you to a monthly filing 
             },
         ],
     },
+    // 23
     {
-        id: "blog30",
+        id: "blog23",
         slug: "federal-excise-duty-explained",
         title: "Federal Excise Duty (FED) in Pakistan, Explained Simply",
         excerpt: "FED applies to specific industries like tobacco, cement, and telecom — different from Sales Tax, and easy to overlook.",
@@ -1558,8 +1565,9 @@ The businesses that get tripped up by FED usually aren't ignoring it deliberatel
             },
         ],
     },
+    // 24
     {
-        id: "blog31",
+        id: "blog24",
         slug: "business-licenses-and-permits-in-pakistan",
         title: "Business Licenses and Permits in Pakistan: A Complete Guide",
         excerpt: "The full checklist of registrations and licenses a new business may need beyond just an NTN.",
@@ -1614,8 +1622,9 @@ Most new business owners register for an NTN and assume they're done. Depending 
             },
         ],
     },
+    // 25
     {
-        id: "blog32",
+        id: "blog25",
         slug: "agricultural-income-tax-rates-in-pakistan",
         title: "Understanding Tax Rates on Agriculture in Pakistan",
         excerpt: "Agricultural income is exempt from federal tax, but taxed provincially — with very different rate structures in Punjab and Sindh.",
@@ -1701,12 +1710,9 @@ Because agricultural taxation happens at the provincial level, the rules genuine
             },
         ],
     },
-    // 41
-    // (BOI report filing, income tax slabs 2024-25, filer vs non-filer,
-    //  tax filing FAQs, GST compliance, non-filer SIMs, Pvt Ltd registration, STR)
-
+    // 26
     {
-        id: "blog34",
+        id: "blog26",
         slug: "boi-report-filing-requirements-in-pakistan",
         title: "Understanding BOI Report Filing Requirements in Pakistan",
         excerpt: "What companies with foreign investment or collaboration must report to the Board of Investment, and why it matters.",
@@ -1774,8 +1780,9 @@ BOI reporting sits at the intersection of three regulatory bodies — SECP, SBP,
             },
         ],
     },
+    // 27
     {
-        id: "blog35",
+        id: "blog27",
         slug: "pakistan-income-tax-slabs-2024-25",
         title: "Understanding Pakistan's Income Tax Slabs 2024–2025",
         excerpt: "The Federal Budget 2024–25 updated salaried income tax slabs — here's the full breakdown by bracket.",
@@ -1831,8 +1838,9 @@ The 2024–25 slabs meaningfully changed the fixed-amount calculations at each b
             },
         ],
     },
+    // 28
     {
-        id: "blog36",
+        id: "blog28",
         slug: "filer-vs-non-filer-in-pakistan",
         title: "Filer vs Non-Filer in Pakistan: Why It Matters",
         excerpt: "The concrete financial difference between being on FBR's Active Taxpayer List and not — and how quickly you can switch.",
@@ -1899,8 +1907,9 @@ The cost of staying a non-filer compounds quietly — a bit more withholding tax
             },
         ],
     },
+    // 29
     {
-        id: "blog37",
+        id: "blog29",
         slug: "commonly-asked-tax-filing-questions-pakistan",
         title: "Commonly Asked Questions About Tax Filing in Pakistan",
         excerpt: "Quick answers to the most searched tax filing questions — registration, documents, freelancer rules, and the ATL.",
@@ -1964,8 +1973,9 @@ Most first-time filers get stuck on the same handful of questions — what docum
             },
         ],
     },
+    // 30
     {
-        id: "blog38",
+        id: "blog30",
         slug: "is-your-business-gst-compliant",
         title: "Is Your Business GST Compliant?",
         excerpt: "GST registration isn't optional past the turnover threshold — here's what compliance actually protects you from.",
@@ -2017,8 +2027,9 @@ GST compliance isn't just an FBR checkbox — it's increasingly a prerequisite f
             },
         ],
     },
+    // 31
     {
-        id: "blog39",
+        id: "blog31",
         slug: "non-filer-sim-cards-blocked-in-pakistan",
         title: "Non-Filer SIM Cards Blocked in Pakistan: What to Know",
         excerpt: "FBR's enforcement drive against non-filers has included SIM suspension — here's what triggers it and how to fix it.",
@@ -2073,8 +2084,9 @@ The SIM blocking itself is a symptom, not the actual problem — the underlying 
             },
         ],
     },
+    // 32
     {
-        id: "blog40",
+        id: "blog32",
         slug: "how-to-register-a-private-limited-company-in-pakistan",
         title: "How to Register a Private Limited Company in Pakistan",
         excerpt: "Why a Pvt Ltd structure protects your brand and attracts investors, and what SECP requires to set one up.",
@@ -2137,9 +2149,9 @@ The SECP registration process itself is fairly mechanical once your documents ar
             },
         ],
     },
-    // 41
+    // 33
     {
-        id: "blog41",
+        id: "blog33",
         slug: "sales-tax-registration-str-why-it-matters",
         title: "What Is Sales Tax Registration (STR) and Why Your Business Needs It",
         excerpt: "Past a certain turnover, STR with FBR isn't optional — here's what it unlocks and what it requires.",
@@ -2196,12 +2208,9 @@ STR is less about the registration paperwork itself — which is fairly standard
             },
         ],
     },
-    // 42
-    // (business bank account, company registration steps, tax audit, NTN registration,
-    //  PSW registration, trademark registration, property CGT, property tax)
-
+    // 34
     {
-        id: "blog42",
+        id: "blog34",
         slug: "how-to-register-a-business-bank-account-in-pakistan",
         title: "How to Register a Business Bank Account in Pakistan",
         excerpt: "The seven-step path from business registration to a working account, and the documents each bank will ask for.",
@@ -2264,8 +2273,9 @@ The order matters here: business registration and NTN need to exist before a ban
             },
         ],
     },
+    // 35
     {
-        id: "blog43",
+        id: "blog35",
         slug: "company-registration-in-pakistan-step-by-step",
         title: "Company Registration in Pakistan: A Step-by-Step Guide",
         excerpt: "From choosing a structure to SECP incorporation and beyond — the full sequence, in order.",
@@ -2339,8 +2349,9 @@ The most common mistake founders make is treating SECP incorporation as the fini
             },
         ],
     },
+    // 36
     {
-        id: "blog44",
+        id: "blog36",
         slug: "tax-audit-in-pakistan-complete-guide",
         title: "Tax Audit in Pakistan: What to Expect and How to Prepare",
         excerpt: "What triggers an FBR audit, which section numbers matter, and the documents you should have ready in advance.",
@@ -2405,8 +2416,9 @@ The businesses and individuals who navigate audits smoothly are almost always th
             },
         ],
     },
+    // 37
     {
-        id: "blog45",
+        id: "blog37",
         slug: "ntn-registration-in-pakistan-made-easy",
         title: "NTN Registration in Pakistan: Fast & Easy Process",
         excerpt: "Why an NTN is the first requirement for almost everything tax-related, and what individuals actually need to apply.",
@@ -2472,8 +2484,9 @@ NTN registration is the one prerequisite that touches almost every other tax and
             },
         ],
     },
+    // 38
     {
-        id: "blog46",
+        id: "blog38",
         slug: "psw-registration-in-pakistan-import-export-guide",
         title: "PSW Registration in Pakistan: Import/Export Made Easy",
         excerpt: "Pakistan Single Window registration is now mandatory for cross-border trade — here's who needs it and what it replaced.",
@@ -2537,8 +2550,9 @@ Even relatively small operations — an Amazon seller sourcing inventory interna
             },
         ],
     },
+    // 39
     {
-        id: "blog47",
+        id: "blog39",
         slug: "trademark-registration-in-pakistan-guide",
         title: "Trademark Registration in Pakistan: A Complete Guide",
         excerpt: "Protecting your brand name and logo legally — what's required, and why the process takes as long as it does.",
@@ -2602,8 +2616,9 @@ The 8-12 month timeline is the detail that trips people up most — many assume 
             },
         ],
     },
+    // 40
     {
-        id: "blog48",
+        id: "blog40",
         slug: "capital-gains-tax-on-property-in-pakistan",
         title: "Capital Gains Tax (CGT) on Property in Pakistan, Explained",
         excerpt: "How holding period and filer status change what you owe when you sell — with the full rate table.",
@@ -2667,8 +2682,9 @@ The filer-vs-non-filer gap in this table is significant, particularly for proper
             },
         ],
     },
+    // 41
     {
-        id: "blog49",
+        id: "blog41",
         slug: "property-tax-in-pakistan-everything-you-need-to-know",
         title: "Property Tax in Pakistan: Everything You Need to Know",
         excerpt: "An annual provincial tax based on location, size, and rental value — not to be confused with CGT on a sale.",
@@ -2729,12 +2745,9 @@ Because property tax is provincial and calculated differently across regions —
             },
         ],
     },
-    // 50
-    // (real estate tax overview, check FBR status, tax penalties, withholding tax,
-    //  business tax benefits, freelancer income tax 2025, salaried tax return 2025,
-    //  how to join ATL, tax deductions 2025, how to file tax returns 2025)
+    // 42
     {
-        id: "blog50",
+        id: "blog42",
         slug: "real-estate-tax-in-pakistan-complete-guide",
         title: "Real Estate Tax in Pakistan: A Complete Guide",
         excerpt: "CGT, withholding tax, and annual property tax all apply to real estate — here's how the three fit together.",
@@ -2790,8 +2803,9 @@ Before any property transaction, it's worth calculating all three obligations to
             },
         ],
     },
+    // 43
     {
-        id: "blog51",
+        id: "blog43",
         slug: "how-to-check-your-fbr-tax-status",
         title: "How to Check Your FBR Tax Status",
         excerpt: "Verify your Active Taxpayer List standing in under a minute using your CNIC or NTN — here's the exact process.",
@@ -2857,8 +2871,9 @@ The check itself takes a minute; the fix if you're not listed takes longer. If y
             },
         ],
     },
+    // 44
     {
-        id: "blog52",
+        id: "blog44",
         slug: "tax-penalties-in-pakistan-how-to-avoid-fines",
         title: "Tax Penalties in Pakistan: How to Avoid Fines",
         excerpt: "The specific rupee amounts FBR charges for late filing, non-filing, and incorrect returns.",
@@ -2919,8 +2934,9 @@ The Rs. 1,000/day late filing penalty is capped at Rs. 50,000, which sounds mana
             },
         ],
     },
+    // 45
     {
-        id: "blog53",
+        id: "blog45",
         slug: "understanding-withholding-tax-in-pakistan",
         title: "Understanding Withholding Tax in Pakistan",
         excerpt: "Tax deducted at the source — on salaries, banking, property, and contracts — and why filer status changes the rate.",
@@ -2982,8 +2998,9 @@ Because WHT touches salaries, banking, property, and contracts all at once, most
             },
         ],
     },
+    // 46
     {
-        id: "blog54",
+        id: "blog46",
         slug: "tax-benefits-for-registered-businesses-in-pakistan",
         title: "Tax Benefits for Registered Businesses in Pakistan",
         excerpt: "What formal registration unlocks beyond compliance — lower withholding, refunds, and tender eligibility.",
@@ -3050,8 +3067,9 @@ Each of these benefits requires the step before it to already be in place — yo
             },
         ],
     },
+    // 47
     {
-        id: "blog55",
+        id: "blog47",
         slug: "income-tax-for-freelancers-in-pakistan-2025",
         title: "Income Tax for Freelancers in Pakistan (2025 Guide)",
         excerpt: "Upwork, Fiverr, and international client income is taxable in Pakistan — here's what counts and what you'll need to file.",
@@ -3117,8 +3135,9 @@ The most common freelancer mistake isn't underreporting deliberately — it's as
             },
         ],
     },
+    // 48
     {
-        id: "blog56",
+        id: "blog48",
         slug: "income-tax-filing-for-salaried-persons-in-pakistan",
         title: "Income Tax Filing for Salaried Persons in Pakistan",
         excerpt: "Filing as a salaried employee is more than compliance — it's how you claim refunds and unlock ATL benefits.",
@@ -3176,8 +3195,9 @@ Employer withholding is a reasonable default, not a personalized calculation —
             },
         ],
     },
+    // 49
     {
-        id: "blog57",
+        id: "blog49",
         slug: "how-to-check-and-join-the-active-taxpayer-list",
         title: "How to Check and Join the Active Taxpayer List (ATL) in Pakistan",
         excerpt: "Two ways to check your status instantly, plus exactly when FBR updates the list each week and year.",
@@ -3243,8 +3263,9 @@ Knowing the Monday update cycle and March annual refresh matters practically —
             },
         ],
     },
+    // 50
     {
-        id: "blog58",
+        id: "blog50",
         slug: "tax-deductions-in-pakistan-2025-what-not-to-miss",
         title: "Tax Deductions in Pakistan (2025): What You Shouldn't Miss",
         excerpt: "Zakat, insurance premiums, school fees, and mutual fund investments can all lower your taxable income — if claimed.",
@@ -3305,8 +3326,9 @@ The list above covers deductions available to a wide range of taxpayers — sala
             },
         ],
     },
+    // 51
     {
-        id: "blog59",
+        id: "blog51",
         slug: "how-to-file-your-tax-return-in-pakistan-2025",
         title: "How to File Your Tax Return in Pakistan (2025)",
         excerpt: "Who needs to file, what documents to gather, and the four-step process from start to ATL confirmation.",
