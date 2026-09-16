@@ -31,7 +31,7 @@ const HowItWorks = (props: Props) => {
                             </RevealOnScroll>
 
                             <RevealOnScroll delay={300}>
-                                <p className="para-base text-text-secondary mt-2 max-w-[510px]">
+                                <p className="para-base text-text-dark/80 mt-2 max-w-[510px]">
                                     Watch how FilerNow makes tax filing and business compliance fast,
                                     easy and reliable. From NTN registration to company setup, we
                                     walk you through every step so you can grow with confidence.

@@ -13,6 +13,7 @@ type Props = {}
 const WhoWeAre = (props: Props) => {
     return (
         <SectionContainer
+        sectionClass="hidden md:block"
             paddingClass="container-y-padding"
         >
             <RevealOnScroll delay={80}>

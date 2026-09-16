@@ -9,7 +9,7 @@ import RevealOnScroll from "../../ui-custom/RevealOnScroll"
 const OurAdvantageStack = () => {
     return (
         <SectionContainer
-            sectionClass="bg-dark-surface-bgx bg-background" containerClass="container-y-padding max-w-[900px]"
+            sectionClass="lg:hidden bg-dark-surface-bgx bg-background" containerClass="container-y-padding max-w-[900px]"
         >
             <RevealOnScroll delay={100}>
                 <SectionTitle

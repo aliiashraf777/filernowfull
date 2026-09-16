@@ -73,19 +73,28 @@ const WaveStepsSection = ({ infoLabel, heading, para, steps, sectionClass }: Pro
                 })}
             </div>
 
-            <div className="lg:hidden flex flex-col gap-8 mt-10">
+            {/* Mobile Layout: 2 rows with horizontal scroll (Hidden on desktop screens ≥ lg) */}
+            <div className="lg:hidden grid grid-flow-col grid-rows-2x overflow-x-auto overflow-y-hidden gap-x-2 gap-y-4 pb-4 pt-2 scrollbar-none snap-x snap-mandatory px-container-x-padding -mx-container-x-padding">
                 {steps.map((step) => (
-                    <div key={step.number} className="flex gap-4 items-start">
-                        <span className="flex items-center justify-center w-14 h-14 rounded-brand-16 bg-white shadow-icon-card shrink-0">
+                    <div
+                        key={step.number}
+                        className="snap-start shrink-0 flex flex-col gap-3 items-start justify-between border border-border-clr rounded-brand-8 p-4 bg-card-bg-clr h-[180px]x"
+                        // style={{ width: 'calc((100vw - (1.5 * 8px) - (2 * 15px)) / 2.5)' }}
+                        style={{ width: 'calc((100vw - (0.5 * 8px) - (2 * 15px)) / 1.5)' }}
+                    >
+                        <span className="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-icon-card shrink-0">
                             {step.icon}
                         </span>
-                        <div>
-                            <h3 className="para-base font-semibold">{step.title}</h3>
-                            <p className="para-tiny text-text-secondary mt-1">{step.description}</p>
+                        <div className="flex-1 flex flex-col justify-end gap-2">
+                            <h3 className="para-small font-bold line-clamp-1x">{step.title}</h3>
+                            <p className="para-tiny text-text-secondary mt-0.5x line-clamp-2x leading-tight">
+                                {step.description}
+                            </p>
                         </div>
                     </div>
                 ))}
             </div>
+
         </SectionContainer>
     )
 }

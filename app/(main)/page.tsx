@@ -34,7 +34,7 @@ export default function Home() {
 
       <WhoWeAre />
 
-      {/* <OurAdvantageStack /> */}
+      <OurAdvantageStack />
 
       <Faqs
         faqData={faqData}

@@ -13,7 +13,7 @@ const QuickTools = () => {
 
     return (
         <SectionContainer sectionClass="bg-background" containerClass="container-y-padding">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 lg:gap-6">
                 {quickToolsData.map((tool, idx) => (
                     <RevealOnScroll
                         key={tool.id}
