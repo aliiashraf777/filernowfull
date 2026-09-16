@@ -9,7 +9,8 @@ type Props = {}
 const OurServices = (props: Props) => {
     return (
         <SectionContainer
-            containerClass="container-y-padding"
+            // Added safe padding tops/bottoms so hover translations never get clipped by overflow boundaries
+            containerClass="container-y-padding overflow-hidden"
         >
             <RevealOnScroll delay={120}>
                 <SectionTitle
@@ -19,11 +20,16 @@ const OurServices = (props: Props) => {
                 />
             </RevealOnScroll>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* Mobile: 2 rows with horizontal scroll | Desktop: Normal 4-column Grid */}
+            {/* Note: The calc below factors in 2.5 cards visible with 8px gaps and 15px layout margins */}
+            <div className="grid grid-flow-col grid-rows-2 overflow-x-auto overflow-y-hidden lg:grid-flow-row lg:grid-cols-4 gap-2 lg:gap-4 pb-4 lg:pt-2 lg:pb-2 scrollbar-none snap-x snap-mandatory px-container-x-padding -mx-container-x-padding lg:px-0 lg:mx-0">
                 {servicesGridData.map((service, idx) => (
-                    <RevealOnScroll key={service.id} delay={idx * 80}>
+                    <RevealOnScroll 
+                        key={service.id} 
+                        delay={idx * 80} 
+                        className="snap-start shrink-0 w-[calc((100vw-(1.5*8px)-(2*15px))/2.5)] lg:w-full"
+                    >
                         <ServiceCard
-                            key={service.id}
                             {...service}
                         />
                     </RevealOnScroll>

@@ -19,6 +19,9 @@
         /* --container-x-padding: 130px; */
         --container-x-padding: clamp(20px, 10.8vw - 25.5px, 130px);
         --container-x-padding: clamp(20px, 7.8vw - 25.5px, 130px);
+        --container-x-padding: clamp(15px, 7.8vw - 25.5px, 130px);
+        /* --container-x-padding: clamp(12px, 10.54vw - 21.7px, 130px);
+        --container-x-padding-alt: clamp(15px, 10.27vw - 17.9px, 130px); */
         --container-y-padding: 60px;
 
         /* brand colors */
