@@ -22,8 +22,30 @@ const FALLBACK_SITE_IDENTITY: ISiteIdentity = {
   logoPublicId: "",
   faviconUrl: "/favicon.ico",
   faviconPublicId: "",
-  socialMedia: {},
+  socialMedia: {
+    twitter: "#",
+    linkedin: "#",
+    instagram: "#",
+    facebook: "#",
+    youtube: "#",
+  },
 };
+
+function withFallback(data: ISiteIdentity, fallback: ISiteIdentity): ISiteIdentity {
+  return {
+    siteName: data.siteName || fallback.siteName,
+    tagline: data.tagline || fallback.tagline,
+    contactFormNotificationEmail: data.contactFormNotificationEmail || fallback.contactFormNotificationEmail,
+    adminEmail: data.adminEmail || fallback.adminEmail,
+    timezone: data.timezone || fallback.timezone,
+    language: data.language || fallback.language,
+    logoUrl: data.logoUrl || fallback.logoUrl,
+    logoPublicId: data.logoPublicId || fallback.logoPublicId,
+    faviconUrl: data.faviconUrl || fallback.faviconUrl,
+    faviconPublicId: data.faviconPublicId || fallback.faviconPublicId,
+    socialMedia: data.socialMedia, // empty object is valid, no socials configured is a real state, not a fallback case
+  };
+}
 
 /**
  * react's `cache()` dedupes this within a single render pass — layout,
@@ -35,17 +57,12 @@ const FALLBACK_SITE_IDENTITY: ISiteIdentity = {
 export const getSiteIdentity = cache(async (): Promise<ISiteIdentity> => {
   try {
     const res = await fetch(`${FASTAPI_URL}/api/admin/site-identity`, {
-      headers: {
-        "ngrok-skip-browser-warning": "true",
-      },
-      next: { revalidate: 0, tags: ["site-identity"] },
+      headers: { "ngrok-skip-browser-warning": "true" },
+      next: { revalidate: 3600, tags: ["site-identity"] },
     });
 
     if (res.status === 401 || res.status === 403) {
-      // Known open item: this route currently requires admin auth.
-      // Public-facing header/footer can't authenticate as admin —
-      // waiting on Umar for a public alias or an auth exemption on GET.
-      console.warn("[site-identity] endpoint requires auth — using fallback until Backend dev exposes a public route");
+      console.warn("[site-identity] endpoint requires auth — using fallback until backend exposes a public route");
       return FALLBACK_SITE_IDENTITY;
     }
 
@@ -54,7 +71,7 @@ export const getSiteIdentity = cache(async (): Promise<ISiteIdentity> => {
     }
 
     const raw: ISiteIdentityRaw = await res.json();
-    return mapSiteIdentity(raw);
+    return withFallback(mapSiteIdentity(raw), FALLBACK_SITE_IDENTITY);
   } catch (err) {
     console.error("[site-identity] falling back to defaults:", err);
     return FALLBACK_SITE_IDENTITY;

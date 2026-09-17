@@ -23,6 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const site = await getSiteIdentity();
 
   return {
+    metadataBase: new URL("https://filernow.com"), // swap for your real production domain
     title: "Income Tax Return, NTN Registration & Tax Filing | Filernow.com",
     description: "Get your income tax return filed within just 1 day — fast, secure, and fully online. FilerNow helps salaried individuals, freelancers, and businesses stay compliant with tax laws.",
     icons: {
@@ -44,6 +45,7 @@ export default async function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", plusJakarta.variable, inter.variable, "font-sans")}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
       <head>
         <script
