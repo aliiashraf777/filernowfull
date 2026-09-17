@@ -1,6 +1,5 @@
 import HomeBlogs from "@/components/home/blog/HomeBlogs";
 import Faqs from "@/components/home/faqs/Faqs";
-import Hero from "@/components/home/hero/Hero";
 import HeroUp from "@/components/home/hero/HeroUp";
 import HowItWorks from "@/components/home/howWorks/HowItWorks";
 import OurAdvantageStack from "@/components/home/stackingCards/OurAdvantageStack";
