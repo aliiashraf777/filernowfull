@@ -24,38 +24,38 @@ const HowItWorks = (props: Props) => {
 
                         {/* text */}
                         <div className="flex flex-col gap-2 lg:gap-3">
-                            <RevealOnScroll delay={100}>
+                            {/* <RevealOnScroll delay={100}> */}
                                 <h5 className="heading-h6 lg:heading-h5 text-primary lg:text-[16px] lg:leading-[20px] tracking-[1.52px] lg:tracking-[2.52px]">
                                     See How It Works
                                 </h5>
-                            </RevealOnScroll>
+                            {/* </RevealOnScroll> */}
 
-                            <RevealOnScroll delay={200}>
+                            {/* <RevealOnScroll delay={200}> */}
                                 <h2 className="heading-h3 lg:heading-h2 lg:max-w-[410px] lg:leading-[40px] tracking-[-0.9px]">
                                     File taxes & register your business the smart way
                                 </h2>
-                            </RevealOnScroll>
+                            {/* </RevealOnScroll> */}
 
-                            <RevealOnScroll delay={300}>
+                            {/* <RevealOnScroll delay={300}> */}
                                 <p className="para-small lg:para-base text-text-dark/80 mt-2 max-w-[510px]">
                                     Watch how FilerNow makes tax filing and business compliance fast,
                                     easy and reliable. From NTN registration to company setup, we
                                     walk you through every step so you can grow with confidence.
                                 </p>
-                            </RevealOnScroll>
+                            {/* </RevealOnScroll> */}
 
-                            <RevealOnScroll delay={400}>
+                            {/* <RevealOnScroll delay={400}> */}
                                 <Button className="mt-5">
                                     Start your filing
                                     <ArrowRight size={18} />
                                 </Button>
-                            </RevealOnScroll>
+                            {/* </RevealOnScroll> */}
                         </div>
 
                         {/* video trigger */}
-                        <RevealOnScroll delay={500}>
+                        {/* <RevealOnScroll delay={500}> */}
                             <VideoCard />
-                        </RevealOnScroll>
+                        {/* </RevealOnScroll> */}
                     </div>
                 </SectionContainer>
             </RevealOnScroll>
