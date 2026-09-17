@@ -16,7 +16,7 @@ const VideoCard = (props: Props) => {
             aria-haspopup="dialog"
             aria-label="Play how it works video"
             onClick={() => setIsVideoOpen(true)}
-            className="group relative sheen-sweep-hover w-full text-left rounded-brand-16 overflow-hidden aspect-video"
+            className="group relative sheen-sweep-hover w-full text-left rounded-brand-16 overflow-hidden aspect-square lg:aspect-video"
             style={{ boxShadow: "0px 20px 50px -16px rgba(17, 17, 17, 0.18)" }}
         >
             <Image

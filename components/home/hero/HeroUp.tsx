@@ -40,8 +40,9 @@ const HeroPersonPanel = ({ className }: { className?: string }) => (
 const MobileHeroBanner = ({ className }: { className?: string }) => (
     <div className={cn("relative w-full", className)}>
         <Image
-            // src="/assets/heroMobileMenu360x220.png"
-            src="/assets/heroMobileMenu800x600.png"
+            // src="/assets/heroMobileBanner360x220.png"
+            // src="/assets/heroMobileBanner800x600.png"
+            src="/assets/heroMobileMenu3334x2500.png"
             alt="File your taxes in just 1 day"
             fill
             sizes="100vw"
@@ -56,7 +57,7 @@ const HeroUp = () => {
     return (<>
         <SectionContainer
             bgImage={<>
-                <Image src="/assets/heroBgImg.svg" alt="" fill priority style={{ objectFit: "cover" }} className="-z-10 hero-bg-image" />
+                <Image src="/assets/heroBgImg.svg" alt="" fill priority className="-z-10 hero-bg-image object-cover" />
                 {/* <HeroPersonPanel
                     className="hidden lg:block absolute inset-y-0 left-1/2 right-0"
                 /> */}
@@ -91,7 +92,7 @@ const HeroUp = () => {
             </div>
         </SectionContainer>
 
-        <MobileHeroBanner className="lg:hidden order-firstx aspect-[360/270] overflow-hidden" />
+        <MobileHeroBanner className="lg:hidden order-firstx aspect-[360/280] overflow-hidden" />
     </>)
 }
 
