@@ -16,6 +16,7 @@ type Props = {
     bottomRow?: HeroBottomRow,
     className?: string,
     headingClassName?: string,
+    maxChars?: number, // Optional prop to control text length
 }
 
 const HeroTextbox = ({
@@ -42,51 +43,74 @@ const HeroTextbox = ({
     bottomRow,
     className,
     headingClassName,
+    maxChars,
 }: Props) => {
+
     return (
-        <div className={cn("py-[50px] md:container-y-padding flex flex-col gap-4 md:gap-7", className)}>
+        <div className={cn("py-[35px] md:container-y-padding flex flex-col gap-3", className)}>
             {breadcrumbItems && <Breadcrumb items={breadcrumbItems} />}
 
             <InfoBadge
                 label={infoBadgeLabel}
-                className="animate-fade-slide-up [animation-delay:450ms]"
+                className="hidden lg:flex animate-fade-slide-up [animation-delay:450ms]"
             />
 
             <h1 className={cn(
-                "max-w-[462px]x heading-h1 tracking-[-1.5px] animate-fade-slide-up [animation-delay:550ms]",
+                "max-w-[462px]x heading-h2 lg:heading-h1 tracking-[-1.5px] animate-fade-slide-up [animation-delay:550ms]",
                 headingClassName
             )}>
                 {heading}
             </h1>
 
-            <p className="para-18 text-text-secondary max-w-[600px] animate-fade-slide-up [animation-delay:650ms]">
+            {/* Mobile Description: Truncated text (Visible on mobile, hidden on desktop) */}
+            <p className="block md:hidden para-small text-text-secondary max-w-[600px] animate-fade-slide-up [animation-delay:650ms]">
+                {maxChars && description.length > maxChars
+                    ? `${description.slice(0, maxChars).trim()}...`
+                    : description}
+            </p>
+
+            {/* Desktop Description: Full text (Hidden on mobile, visible on desktop) */}
+            <p className="hidden md:block para-18 text-text-secondary max-w-[600px] animate-fade-slide-up [animation-delay:650ms]">
                 {description}
             </p>
 
+
             {ctas.length > 0 && (
                 <div className="flex flex-wrap items-center gap-4 animate-fade-slide-up [animation-delay:750ms]">
-                    {ctas.map((cta, i) =>
-                        cta.href ? (
+                    {ctas.map((cta, i) => {
+                        // Apply custom classes: keep index 0 visible everywhere, hide index 1+ on mobile
+                        const responsiveClass = cn(
+                            "hover:-translate-y-0.5",
+                            i > 0 && "hidden sm:inline-flex" // Hides second+ button on mobile, shows from 'sm' screens up
+                        );
+
+                        return cta.href ? (
                             <LinkBtn
                                 key={i}
                                 href={cta.href}
                                 label={cta.label}
                                 icon={cta.icon}
                                 variant={cta.variant}
-                                className="hover:-translate-y-0.5"
+                                className={responsiveClass}
                             />
                         ) : (
-                            <Button key={i} variant={cta.variant} onClick={cta.onClick} className="hover:-translate-y-0.5">
+                            <Button
+                                key={i}
+                                variant={cta.variant}
+                                onClick={cta.onClick}
+                                className={responsiveClass}
+                            >
                                 {cta.label}
                                 {cta.icon}
                             </Button>
-                        )
-                    )}
+                        );
+                    })}
                 </div>
             )}
 
+
             {bottomRow?.type === "stats" && (
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-7 divide-x divide-stat-divider-clr animate-fade-slide-up [animation-delay:850ms]">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-2 divide-x divide-stat-divider-clr animate-fade-slide-up [animation-delay:850ms]">
                     {bottomRow.items.map((stat) => (
                         <StatCounter
                             key={stat.label}

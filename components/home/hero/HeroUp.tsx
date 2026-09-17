@@ -65,24 +65,15 @@ const HeroUp = () => {
             </>}
             containerClass="relative"
         >
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center items-stretchx">
-                <HeroTextbox
-                    className="hidden lg:block"
-                    infoBadgeLabel="Online Tax Filing Portal"
-                    heading={<>File Your Taxes In<span className="text-primary"> Just 1 Day</span></>}
-                    description="File your income tax return in just one day — fast, secure, and fully online. From NTN registration and ATL listing to business registration, trademarks, and SECP incorporation, FilerNow handles everything with expert support."
-                    ctas={[
-                        {
-                            label: "File Now",
-                            icon: <ArrowRight size={18} />, variant: "primary"
-                        },
-                        {
-                            label: "Talk to an Expert",
-                            icon: <FaWhatsapp size={18} className="text-secondary" />, variant: "white"
-                        },
-                    ]}
-                    bottomRow={{ type: "stats", items: heroStatsData }}
-                />
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-centerx items-stretch">
+                <div className="hidden lg:block">
+                    <HeroTextbox
+                        infoBadgeLabel="Online Tax Filing Portal"
+                        heading={<>File Your Taxes In<span className="text-primary"> Just 1 Day</span></>}
+                        description="File your income tax return in just one day — fast, secure, and fully online. From NTN registration and ATL listing to business registration, trademarks, and SECP incorporation, FilerNow handles everything with expert support."
+                        bottomRow={{ type: "stats", items: heroStatsData }}
+                    />
+                </div>
 
                 {/* <HeroPersonPanel
                     className="hidden aspect-[4/5]"

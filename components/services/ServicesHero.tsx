@@ -41,18 +41,17 @@ const ServicesHero = ({
             }
             containerClass="relative py-16x"
         >
-            <div className="max-w-xl">
-                {/* {breadcrumbItems && <Breadcrumb items={breadcrumbItems} />} */}
-                <HeroTextbox
-                    breadcrumbItems={breadcrumbItems}
-                    infoBadgeLabel={infoBadgeLabel}
-                    heading={heading}
-                    description={description}
-                    ctas={ctas}
-                    bottomRow={checklist.length > 0 ? { type: "checklist", items: checklist } : undefined}
-                // className="max-w-xl"
-                />
-            </div>
+            {/* {breadcrumbItems && <Breadcrumb items={breadcrumbItems} />} */}
+            <HeroTextbox
+                breadcrumbItems={breadcrumbItems}
+                infoBadgeLabel={infoBadgeLabel}
+                heading={heading}
+                description={description}
+                ctas={ctas}
+                bottomRow={checklist.length > 0 ? { type: "checklist", items: checklist } : undefined}
+                className="max-w-4xl"
+                maxChars={150}
+            />
         </SectionContainer>
     )
 }

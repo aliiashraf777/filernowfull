@@ -17,7 +17,6 @@ import BeforeFooter from "@/components/common/footer/BeforeFooter";
 export default function Home() {
   return (
     <main className="min-h-[40vh]">
-      {/* <Hero /> */}
       <HeroUp />
 
       <QuickTools />
