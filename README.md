@@ -26,7 +26,7 @@ The public site covers services, a blog, tax rates, a filer status checker, and 
 
 <p align="center">
 
-  <img src="./public/assets/preview.png" />
+  <img src="./public/assets/desktop-ss.png" />
 
 </p>
 
