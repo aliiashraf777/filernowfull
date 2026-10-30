@@ -112,11 +112,11 @@ The public site covers services, a blog, tax rates, a filer status checker, and 
 
 ### 🖥️ Desktop
 
-![Desktop](./public/assets/desktop.png)
+![Desktop](./public/assets/desktop-ss.png)
 
 ### 📱 Mobile
 
-![Mobile](./public/assets/mobile.png)
+![Mobile](./public/assets/mobile-ss.png)
 
 ## 📂 Folder Structure
 
