@@ -138,9 +138,9 @@ middleware.ts
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/aliiashraf777/YOUR-REPO-NAME.git
+git clone https://github.com/aliiashraf777/filernowfull.git
 
-cd YOUR-REPO-NAME
+cd filernowfull
 
 npm install
 
